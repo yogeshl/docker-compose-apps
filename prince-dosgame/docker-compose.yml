@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  prince-dosbox:
+    image: yogeshl/prince:latest
+    ports:
+      - "6080:6080"

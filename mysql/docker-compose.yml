@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  mysql-linux:
+    image: mysql
+    volumes:
+      - mysql-server-linux-data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql-server-linux-data:

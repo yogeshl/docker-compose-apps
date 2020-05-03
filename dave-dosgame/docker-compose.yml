@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  dave-dosbox:
+    image: yogeshl/dave:latest
+    ports:
+      - "6080:6080"
