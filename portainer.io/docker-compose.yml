@@ -10,5 +10,13 @@ services:
       - "8000:8000"
       - "9000:9000"
 
+  portainer-agent:
+    image: "portainer/agent"
+    volumes:
+      - /var/lib/docker/volumes:/var/lib/docker/volumes
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "9001:9001"
+
 volumes:
   portainer_data:
