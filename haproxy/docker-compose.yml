@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  haproxy-2.2.4:
+    image: "haproxy:2.2.4"
+    volumes:
+      - "/home/ec2-user/haproxy-docker-mount:/usr/local/etc/haproxy:ro"
+      - "/home/ec2-user/haproxy-docker-mount/cors.lua:/usr/local/etc/haproxy/cors.lua"
+    ports:
+      - "80:80"
